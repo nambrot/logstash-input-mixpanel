@@ -8,11 +8,11 @@ require "socket" # for Socket.gethostname
 #
 # This plugin is intented only as an example.
 
-class LogStash::Inputs::Example < LogStash::Inputs::Base
-  config_name "example"
+class LogStash::Inputs::Mixpanel < LogStash::Inputs::Base
+  config_name "mixpanel"
 
   # If undefined, Logstash will complain, even if codec is unused.
-  default :codec, "plain" 
+  default :codec, "plain"
 
   # The message string to use in the event.
   config :message, :validate => :string, :default => "Hello World!"
